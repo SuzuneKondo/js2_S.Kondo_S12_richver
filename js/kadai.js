@@ -1,6 +1,7 @@
 //繋がっているかかくにん
 // alert(1111);
 
+
 // 自分がグー（防御）を出したとき
 
 $(".action__btn_gu").on("click",function(){
