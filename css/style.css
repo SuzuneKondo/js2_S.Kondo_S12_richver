@@ -1,0 +1,469 @@
+html {
+    font-size: 62.5%;/* 16px*62.5%=10px */
+    font: optional;
+}
+
+body{
+    color: #222222;
+    font-size: 1.6rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Noto Sans JP',Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+    background-attachment: fixed;
+}
+
+/* header */
+
+.header-box{
+    padding: 5px;
+    background-color: #fafdff;
+}
+
+.header-title{
+    font-size: 6.0rem;
+    font-weight: bold;
+    margin: 50px 0;
+    text-align: center;
+    justify-content: center;
+}
+
+/* .header-img{
+    max-width: 1200px;
+    max-height: 400px;
+} */
+
+/* hantei-box */
+
+.hantei-title{
+    font-size: 3.0rem;
+    color: #ff4500;
+    margin: 20px 0 30px;
+}
+
+.judgement{
+    font-size: 4.8rem;
+    color: #ff4500;
+    margin: 0 0 10px;
+}
+
+.lifes{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px 30px;
+}
+
+.life-wrapper-cp{
+    display: flex;
+    justify-content: left;
+}
+
+.life{
+    margin: 20px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 30px;
+  }
+  
+  .meter-cp {
+    width: 50px;
+    height: 50px;
+    transform: skewX(25deg);
+    background: #33ccff;
+  }
+
+  .life-wrapper-me{
+    display: flex;
+    justify-content: right;
+}
+
+  .meter-me {
+    width: 50px;
+    height: 50px;
+    transform: skewX(-25deg);
+    background: #ff6347;
+  }
+
+.hantei-text-cp{
+    font-size: 3.6rem;
+    margin: 5px 20px;
+}
+
+.hantei-text-me{
+    font-size: 3.6rem;
+    margin: 5px 20px;
+}
+
+.action{
+    display: flex;
+    justify-content: space-around;
+}
+
+.action-name-cp{
+    position: relative;
+    background-color: #f7f6f5;
+    padding: 0 10px;
+    border: 2px solid #33ccff;
+    color: #222222;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.action-name-cp::before,
+.action-name-cp::after {
+content: '';
+position: absolute;
+border: 12px solid transparent;
+top: 100%;
+right: 10%;
+}
+
+.action-name-cp::before {
+border-top: 12px solid #33ccff;
+}
+
+.action-name-cp::after {
+margin-top: -4px;
+border-top: 12px solid #f7f6f5;
+}
+
+.action-name-me{
+    position: relative;
+    background-color: #f7f6f5;
+    padding: 0 10px;
+    border: 2px solid#ff6347;
+    color: #222222;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.action-name-me::before,
+.action-name-me::after {
+content: '';
+position: absolute;
+border: 12px solid transparent;
+top: 100%;
+left: 10%;
+}
+
+.action-name-me::before {
+border-top: 12px solid #ff6347;
+}
+
+.action-name-me::after {
+margin-top: -4px;
+border-top: 12px solid #f7f6f5;
+}
+
+/* referee */
+
+.player-image-re{
+    max-height: 200px;
+    width: fit-content;
+}
+
+/* field */
+
+.human{
+    /* margin: 0 10px; */
+}
+
+.field{
+    display: flex;
+    justify-content: center;
+    /* background-image: url(../img/haikei.jpeg);
+    background-size: 300px;
+    background-position: center; */
+    /* background-blend-mode:lighten; */
+    /* background-color: rgba(194, 234, 241, 0.435); */
+}
+
+.player__name_cp{
+    font-size: 3.6rem;
+    margin: 20px;
+    text-align: center;
+    background-color: #33ccff;
+}
+
+.player__name_me{
+    font-size: 3.6rem;
+    margin: 20px;
+    text-align: center;
+    background-color: #ff6347;
+}
+
+.field-image{
+    height: auto;
+}
+
+.player-image-cp{
+    max-height: 300px;
+    width: fit-content;
+}
+
+.player-image-me{
+    max-height: 300px;
+    width: fit-content;
+    transform: scale(-1, 1);
+}
+
+/* field-mat */
+.field-mat{
+    display: flex;
+    justify-content: center;
+}
+
+.mat{
+    width: 800px;
+    border: 10px solid;
+    border-color: #00a1e9;
+    border-radius: 5px;
+    margin: 0 0 20px;
+}
+
+/* action-btn */
+
+.btn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 300px 100px 0;
+
+}
+
+.btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-btn{
+    margin: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #555555;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #555555;
+    transition: 0.3s;
+    box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
+    background-color: #ff4500;
+  }
+  
+  .action-btn:hover {
+    box-shadow: 0 0 #fff;
+    transform: translateY(1px);
+  }
+
+.action__btn_gu{
+    font-size: 3.0rem;
+    padding: 0 60px;
+}
+
+.action__btn_cho{
+    font-size: 3.0rem;
+    padding: 0 60px;
+}
+
+.action__btn_pa{
+    font-size: 3.0rem;
+    padding: 0 60px;
+}
+
+/* footer */
+.footer{
+    text-align: center;
+    padding: 30px 0;
+    background-color: darkolivegreen;
+}
+
+
+
+/* --------------
+試しに入れてみたゲージ
+----------------*/
+
+/* .point-gauge{
+    display: flex;
+    justify-content: space-around;
+}
+
+#gauge-container * {
+    box-sizing: border-box;
+}
+
+#gauge-container {
+    width: 100%;
+    height: 30px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scaleX(-1);
+}
+
+#gauge-container2 {
+    width: 100%;
+    height: 30px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#background {
+    position: relative;
+    z-index: 0;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    display: flex;
+    align-items: center;
+}
+
+#background-top,#background-bottom {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 50%;
+}
+
+#background-top {
+    top: 0%;
+    background: linear-gradient(to right,rgb(45,45,45),rgb(60,60,60));
+}
+
+#background-bottom {
+    bottom: 0%;
+    background: linear-gradient(to right,rgb(35,35,35),rgb(20,20,20));
+}
+
+#back-gauge,#front-gauge {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 60%;
+}
+
+#back-gauge {
+    background: rgb(160, 15, 15);
+    border-top: solid rgb(240, 30, 10) 3px;
+    border-bottom: solid rgb(240, 30, 10) 3px;
+    opacity: 0;
+}
+
+#back-gauge.full {
+    background: repeating-linear-gradient(45deg, rgb(200, 160, 70) 0%, rgb(250, 250, 180) 10%, rgb(200, 160, 70) 35%);
+    border-color: rgb(220, 220, 120);
+    opacity: 1;
+}
+
+.fadeout {
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 0.9 }
+    50% { opacity: 0.9 }
+    100% { opacity: 0 }
+}
+
+#front-gauge {
+    border-style: solid;
+    border-width: 3px 0;
+}
+
+#front-gauge.full {
+    background: linear-gradient(45deg, transparent 0% 5%, rgb(255, 255, 200) 7% 9%, transparent 11% 12%, rgb(255, 255, 200) 14%, transparent 16% ); 
+    background-size: 200% 200%;
+    border: none;
+    animation: flow 5s infinite ease;
+}
+
+@keyframes flow {
+    0% {
+        opacity: 0;
+        background-position: -60%;
+    }
+    40% {
+        background-position: -60%;
+        opacity: 1;
+    }
+    80% {
+        background-position: -10%;
+        opacity: 0.4;
+    }
+    100% {
+        background-position: -10%;
+        opacity: 0;
+    }
+}
+
+.normal {
+    background: linear-gradient(to left, rgba(36, 206, 87, 0.8), rgba(189, 224, 61, 0.8));
+    border-color: lightgreen;
+}
+
+#frame {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    border-top: solid 2px darkgray;
+    border-bottom: solid 2px darkgray;
+    border-left: solid 3px white;
+    border-right: solid 3px white;
+}
+
+#triangle-tl {
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid white;
+    border-right: 7px solid transparent;
+}
+
+#triangle-tr {
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid white;
+    border-left: 7px solid transparent;
+}
+
+#triangle-bl {
+    position: absolute;
+    bottom: -2px;
+    left: -3px;
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid white;
+    border-right: 7px solid transparent;
+}
+
+#triangle-br {
+    position: absolute;
+    bottom: -2px;
+    right: -3px;
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid white;
+    border-left: 7px solid transparent;
+}
+
+#btns {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+}
+#btns button {
+    width: 5em;
+    margin-right: 1em;
+} */

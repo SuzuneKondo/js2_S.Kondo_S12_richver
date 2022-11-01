@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>KARATE FIGHTER</title>
+</head>
+<body>
+
+<header>
+    <div class="header-box">
+        <a href="https://fontmeme.com/jfont/ssf4-abuket-font/"><img src="https://fontmeme.com/permalink/221030/15aa1a454e4a03f7c2272767c8d0c71f.png" alt="header画像" border="0"></a>
+        <!-- <h1 class="header-title">組手　一本勝負</h1> -->
+    </div>
+</header>
+
+<main>
+    
+    <div class="hantei-box">
+        <h1 class="hantei-title">【 Round1 】</h1>
+        <p class="judgement"><!-- ここに判定結果 -->用意、はじめ！</p>
+        
+        <!-- 試しに入れてみたゲージ -->
+        <!-- <div class="point-gauge">
+            <div id="gauge-container">
+                <div id="background">
+                    <div id="background-top"></div>
+                    <div id="background-bottom"></div>
+                    <div id="back-gauge" class="full"></div>
+                    <div id="front-gauge" class="full"></div>
+                    <div id="frame">
+                        <div id="triangle-tl"></div>
+                        <div id="triangle-tr"></div>
+                        <div id="triangle-bl"></div>
+                        <div id="triangle-br"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="btns">
+                <button onclick="attack(5)">攻撃</button>
+            </div>
+            <div id="gauge-container2">
+                <div id="background">
+                    <div id="background-top"></div>
+                    <div id="background-bottom"></div>
+                    <div id="back-gauge" class="full"></div>
+                    <div id="front-gauge" class="full"></div>
+                    <div id="frame">
+                        <div id="triangle-tl"></div>
+                        <div id="triangle-tr"></div>
+                        <div id="triangle-bl"></div>
+                        <div id="triangle-br"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="btns">
+                <button onclick="attack(5)">攻撃</button>
+            </div>
+        </div> -->
+        <!-- 試し -->
+
+        <div class="lifes">
+            <div class="life-wrapper-cp">
+                <div class="life">
+                    <div class="meter-cp cplife1"></div>
+                </div>
+                <div class="life">
+                    <div class="meter-cp cplife2"></div>
+                </div>
+                <div class="life">
+                    <div class="meter-cp cplife3"></div>
+                </div>
+            </div>
+            <div class="life-wrapper-me">
+                <div class="life">
+                    <div class="meter-me melife3"></div>
+                </div>
+                <div class="life">
+                    <div class="meter-me melife2"></div>
+                </div>
+                <div class="life">
+                    <div class="meter-me melife1"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <div class="action">
+            <div class="action-name-cp">
+                <h2 class="hantei-text-cp"><!--ここにCPの手-->思考中…</h2>
+            </div>
+            <div class="action-name-me">
+                <h2 class="hantei-text-me"><!--ここに自分の手-->思考中…</h2>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="referee">
+        <div class="playername">
+            <p class="player__name">審判</p>
+        </div>
+        <div class="field-image">
+            <img src="img/ref1.png" alt="審判の人" class="player-image-re">
+        </div>
+    </div>-->
+
+    <div class="field">
+        <div class="human">
+            <div class="playername">
+                <p class="player__name_cp">COM（青）</p>
+            </div>
+            <div class="field-image">
+                <img src="img/kamae.png" alt="CPの人" class="player-image-cp">
+            </div>
+        </div>
+        <div class="human">
+            <div class="playername">
+                <p class="player__name_me">自分（赤）</p>
+            </div>
+            <div class="field-image">
+                <img src="img/kamae.png" alt="自分" class="player-image-me">
+            </div>
+        </div>
+    </div>
+
+    <div class="field-mat">
+        <p class="mat"></p>
+    </div>
+
+    <div class="btn">
+        <div class="btn-wrapper">
+            <div class="btn-text">
+                <p class="btn__text">↓ワザを選択↓</p>
+            </div>
+            <div class="action-btn">
+                <p class="action__btn_gu">防御</p>
+            </div>
+            <div class="action-btn">
+                <p class="action__btn_cho">突き</p>
+            </div>
+            <div class="action-btn">
+                <p class="action__btn_pa">蹴り</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/kadai.js"></script>
+
+<footer>
+<p class="footer">SuzuneKondo.inc since2022</p>
+</footer>
+</body>
+</html>
