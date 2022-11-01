@@ -14,15 +14,14 @@
 
 <header>
     <div class="header-box">
-        <a href="https://fontmeme.com/jfont/ssf4-abuket-font/"><img src="https://fontmeme.com/permalink/221030/15aa1a454e4a03f7c2272767c8d0c71f.png" alt="header画像" border="0"></a>
-        <!-- <h1 class="header-title">組手　一本勝負</h1> -->
+        <img src="https://fontmeme.com/permalink/221030/15aa1a454e4a03f7c2272767c8d0c71f.png" alt="header画像" border="0">
+        <!-- <h1 class="header-title">組手一本勝負</h1> -->
     </div>
 </header>
 
 <main>
-    
     <div class="hantei-box">
-        <h1 class="hantei-title">【 Round1 】</h1>
+        <h1 class="hantei-title">試合開始</h1>
         <p class="judgement"><!-- ここに判定結果 -->用意、はじめ！</p>
         
         <!-- 試しに入れてみたゲージ -->
@@ -63,75 +62,73 @@
             </div>
         </div> -->
         <!-- 試し -->
-
-        <div class="lifes">
-            <div class="life-wrapper-cp">
-                <div class="life">
-                    <div class="meter-cp cplife1"></div>
+        <div class="back-img">
+            <div class="lifes">
+                <div class="life-wrapper-cp">
+                    <div class="life">
+                        <div class="meter-cp1"></div>
+                    </div>
+                    <div class="life">
+                        <div class="meter-cp2"></div>
+                    </div>
+                    <div class="life">
+                        <div class="meter-cp3"></div>
+                    </div>
                 </div>
-                <div class="life">
-                    <div class="meter-cp cplife2"></div>
-                </div>
-                <div class="life">
-                    <div class="meter-cp cplife3"></div>
+                <div class="life-wrapper-me">
+                    <div class="life">
+                        <div class="meter-me3"></div>
+                    </div>
+                    <div class="life">
+                        <div class="meter-me2"></div>
+                    </div>
+                    <div class="life">
+                        <div class="meter-me1"></div>
+                    </div>
                 </div>
             </div>
-            <div class="life-wrapper-me">
-                <div class="life">
-                    <div class="meter-me melife3"></div>
+            <div class="action">
+                <div class="action-name-cp">
+                    <h2 class="hantei-text-cp"><!--ここにCPの手-->思考中…</h2>
                 </div>
-                <div class="life">
-                    <div class="meter-me melife2"></div>
+                <div class="action-name-me">
+                    <h2 class="hantei-text-me"><!--ここに自分の手-->思考中…</h2>
                 </div>
-                <div class="life">
-                    <div class="meter-me melife1"></div>
+            </div>
+
+            <!--<div class="referee">
+                <div class="playername">
+                    <p class="player__name">審判</p>
                 </div>
+                <div class="field-image">
+                    <img src="img/ref1.png" alt="審判の人" class="player-image-re">
+                </div>
+            </div>-->
+
+            <div class="field">
+                <div class="human">
+                    <div class="playername">
+                        <p class="player__name_cp">COM（青）</p>
+                    </div>
+                    <div class="field-image">
+                        <img src="img/kamae.png" alt="CPの人" class="player-image-cp">
+                    </div>
+                </div>
+                <div class="human">
+                    <div class="playername">
+                        <p class="player__name_me">自分（赤）</p>
+                    </div>
+                    <div class="field-image">
+                        <img src="img/kamae.png" alt="自分" class="player-image-me">
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-mat">
+                <p class="mat"></p>
             </div>
         </div>
-        
     </div>
-        <div class="action">
-            <div class="action-name-cp">
-                <h2 class="hantei-text-cp"><!--ここにCPの手-->思考中…</h2>
-            </div>
-            <div class="action-name-me">
-                <h2 class="hantei-text-me"><!--ここに自分の手-->思考中…</h2>
-            </div>
-        </div>
-    </div>
-
-    <!--<div class="referee">
-        <div class="playername">
-            <p class="player__name">審判</p>
-        </div>
-        <div class="field-image">
-            <img src="img/ref1.png" alt="審判の人" class="player-image-re">
-        </div>
-    </div>-->
-
-    <div class="field">
-        <div class="human">
-            <div class="playername">
-                <p class="player__name_cp">COM（青）</p>
-            </div>
-            <div class="field-image">
-                <img src="img/kamae.png" alt="CPの人" class="player-image-cp">
-            </div>
-        </div>
-        <div class="human">
-            <div class="playername">
-                <p class="player__name_me">自分（赤）</p>
-            </div>
-            <div class="field-image">
-                <img src="img/kamae.png" alt="自分" class="player-image-me">
-            </div>
-        </div>
-    </div>
-
-    <div class="field-mat">
-        <p class="mat"></p>
-    </div>
-
     <div class="btn">
         <div class="btn-wrapper">
             <div class="btn-text">
@@ -148,7 +145,6 @@
             </div>
         </div>
     </div>
-
 </main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

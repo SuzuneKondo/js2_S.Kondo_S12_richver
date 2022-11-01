@@ -1,14 +1,23 @@
 //繋がっているかかくにん
 // alert(1111);
 
+
+//ライフの数０から
+let winCount=0;
+let loseCount=0;
+//試合数
+let gameCount=0;
+
+
 // 自分がグー（防御）を出したとき
 
 $(".action__btn_gu").on("click",function(){
-    //乱数
+
+    //乱数---kが自分の手（グー）、rが相手の技（ランダム）
     const k=1;
     const r=Math.ceil(Math.random()*3);
 
-    //if分岐処理
+    //if分岐処理--相手の手が何になるか
     let view="";
     if(r===1){
         console.log("防御");
@@ -24,41 +33,55 @@ $(".action__btn_gu").on("click",function(){
         img=$('.player-image-cp').attr("src","img/keri.png");
     }
 
-    //表示処理
+    //表示処理---相手の手rが決まった→自分のグーkとの組み合わせで結果表示
     $(".hantei-text-cp").html(view);
-
+    
     let kekka="";
-    if(r===1&&k===1){
+    if(k===1&&r===1){
         console.log("引き分け");
         kekka='引分け！続けてはじめ！';
-    }else if(r===2&&k===1){
+    }else if(k===1&&r===2){
         console.log("勝ち");
         kekka='赤『防御』有効！';
-        $(".player-image-me").animate({"marginRight":"100px"});
-        count += 1;
-            if(count===1){
-                $(".cplife1").remove();
-            }else if(count===2){
-                $(".cplife2").remove();
-            }else if(count===3){
-                $(".cplife3").remove();
+        winCount = winCount + 1;
+            if(winCount===1){
+                $(".meter-cp1").remove();
+            }else if(winCount===2){
+                $(".meter-cp2").remove();
+            }else if(winCount===3){
+                $(".meter-cp3").remove();
             }
-    }else if(r===3&&k===1){
+        console.log('CPライフ-'+winCount);
+        $(".player-image-me").animate({"marginRight":"100px"});
+    }else if(k===1&&r===3){
         console.log("負け");
         kekka='青『回し蹴り』一本！';
-        $(".player-image-cp").animate({"marginLeft":"100px"});
-        count += 1;    
-            if(count===1){
-                $(".melife1").remove();
-            }else if(count===2){
-                $(".melife2").remove();
-            }else if(count===3){
-                $(".melife3").remove();
+        loseCount = loseCount + 1;
+            if(loseCount===1){
+                $(".meter-me3").remove();
+            }else if(loseCount===2){
+                $(".meter-me2").remove();
+            }else if(loseCount===3){
+                $(".meter-me1").remove();
             }
+        console.log('MEライフ-'+loseCount);
+        $(".player-image-cp").animate({"marginLeft":"100px"});
     }
 
+    gameCount = gameCount + 1;
+    console.log('試合数'+gameCount)
     $(".judgement").html(kekka);
-    $(".hantei-title").text('【 試合結果 】');
+
+//試合結果の表示を変える
+let fightResult="";
+if(loseCount===3){
+    fightResult='敗戦…';
+}else if(winCount===3){
+    fightResult='勝利！';
+}else if(winCount<=2 || loseCount<=2){
+    fightResult='Round'+gameCount;
+}
+$(".hantei-title").html(fightResult);
 
 });
 
@@ -93,6 +116,15 @@ $(".action__btn_cho").on("click",function(){
     if(r===1&&k===2){
         console.log("負け");
         kekka='青『防御』有効！';
+        loseCount = loseCount + 1;
+            if(loseCount===1){
+                $(".meter-me3").remove();
+            }else if(loseCount===2){
+                $(".meter-me2").remove();
+            }else if(loseCount===3){
+                $(".meter-me1").remove();
+            }
+        console.log('MEライフ-'+loseCount);
         $(".player-image-cp").animate({"marginLeft":"100px"});
     }else if(r===2&&k===2){
         console.log("あいこ");
@@ -100,11 +132,32 @@ $(".action__btn_cho").on("click",function(){
     }else if(r===3&&k===2){
         console.log("勝ち");
         kekka='赤『中段突き』有効！';
+        winCount = winCount + 1;
+            if(winCount===1){
+                $(".meter-cp1").remove();
+            }else if(winCount===2){
+                $(".meter-cp2").remove();
+            }else if(winCount===3){
+                $(".meter-cp3").remove();
+            }
+        console.log('CPライフ-'+winCount);
         $(".player-image-me").animate({"marginRight":"100px"});
     }
 
+    gameCount = gameCount + 1;
+    console.log('試合数'+gameCount)
     $(".judgement").html(kekka);
-    $(".hantei-title").text('【 試合結果 】');
+
+//試合結果の表示を変える
+let fightResult="";
+if(loseCount===3){
+    fightResult='敗戦…';
+}else if(winCount===3){
+    fightResult='勝利！';
+}else if(winCount<=2 || loseCount<=2){
+    fightResult='Round'+gameCount;
+}
+$(".hantei-title").html(fightResult);
 
 });
 
@@ -138,22 +191,54 @@ $(".action__btn_pa").on("click",function(){
     if(r===1&&k===3){
         console.log("勝ち");
         kekka='赤『回し蹴り』一本！';
+        winCount = winCount + 1;
+            if(winCount===1){
+                $(".meter-cp1").remove();
+            }else if(winCount===2){
+                $(".meter-cp2").remove();
+            }else if(winCount===3){
+                $(".meter-cp3").remove();
+            }
+        console.log('CPライフ-'+winCount);
         $(".player-image-me").animate({"marginRight":"100px"});
     }else if(r===2&&k===3){
         console.log("負け");
         kekka='青『中段突き』有効！';
+        loseCount = loseCount + 1;
+            if(loseCount===1){
+                $(".meter-me3").remove();
+            }else if(loseCount===2){
+                $(".meter-me2").remove();
+            }else if(loseCount===3){
+                $(".meter-me1").remove();
+            }
+        console.log('MEライフ-'+loseCount);
         $(".player-image-cp").animate({"marginLeft":"100px"});
     }else if(r===3&&k===3){
         console.log("あいこ");
         kekka='引分け！続けてはじめ！';
     }
 
+    gameCount = gameCount + 1;
+    console.log('試合数'+gameCount)
     $(".judgement").html(kekka);
-    $(".hantei-title").text('【 試合結果 】');
+
+//試合結果の表示を変える
+let fightResult="";
+if(loseCount===3){
+    fightResult='敗戦…';
+}else if(winCount===3){
+    fightResult='勝利！';
+}else if(winCount<=2 || loseCount<=2){
+    fightResult='Round'+gameCount;
+}
+$(".hantei-title").html(fightResult);
+
 });
 
 
-//自分の技を出す＋画像を変える
+//-----自分の技を出す＋画像を変える-----//
+
 
 $(".action__btn_gu").on("click",function(){
     console.log("防御");
@@ -184,6 +269,7 @@ $(".action__btn_pa").on("click",function(){
     $(".player-image-me").attr("src","img/keri.png");
     return false;
 });
+
 
 
 //試しに入れてみたゲージ

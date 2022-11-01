@@ -6,11 +6,18 @@ html {
 body{
     color: #222222;
     font-size: 1.6rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
     text-align: center;
     font-family: 'Noto Sans JP',Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
-    background-attachment: fixed;
+}
+
+.back-img{
+    max-width: 1200px;
+    background-image: url(../img/haikei.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
 /* header */
@@ -18,7 +25,9 @@ body{
 .header-box{
     padding: 5px;
     background-color: #fafdff;
+    max-width: 1000px;
 }
+
 
 .header-title{
     font-size: 6.0rem;
@@ -60,24 +69,52 @@ body{
     gap: 10px 30px;
   }
   
-  .meter-cp {
-    width: 50px;
+.meter-cp1{
+    width: 100px;
     height: 50px;
     transform: skewX(25deg);
     background: #33ccff;
-  }
+}
 
-  .life-wrapper-me{
+.meter-cp2{
+    width: 100px;
+    height: 50px;
+    transform: skewX(25deg);
+    background: #33ccff;
+}
+
+.meter-cp3{
+    width: 100px;
+    height: 50px;
+    transform: skewX(25deg);
+    background: #33ccff;
+}
+
+.life-wrapper-me{
     display: flex;
     justify-content: right;
 }
 
-  .meter-me {
-    width: 50px;
+.meter-me1{
+    width: 100px;
     height: 50px;
     transform: skewX(-25deg);
     background: #ff6347;
-  }
+}
+
+.meter-me2{
+    width: 100px;
+    height: 50px;
+    transform: skewX(-25deg);
+    background: #ff6347;
+}
+
+.meter-me3{
+    width: 100px;
+    height: 50px;
+    transform: skewX(-25deg);
+    background: #ff6347;
+}
 
 .hantei-text-cp{
     font-size: 3.6rem;
@@ -211,7 +248,7 @@ border-top: 12px solid #f7f6f5;
 .mat{
     width: 800px;
     border: 10px solid;
-    border-color: #00a1e9;
+    border-color: #009fe900;
     border-radius: 5px;
     margin: 0 0 20px;
 }
@@ -221,7 +258,7 @@ border-top: 12px solid #f7f6f5;
 .btn{
     display: flex;
     justify-content: flex-end;
-    margin: 0 300px 100px 0;
+    margin: 0 200px 100px 0;
 
 }
 
@@ -238,14 +275,14 @@ border-top: 12px solid #f7f6f5;
     justify-content: center;
     line-height: 1;
     text-decoration: none;
-    color: #555555;
+    color: #fff9f5;
     font-size: 18px;
     border-radius: 20px;
-    width: 200px;
-    height: 40px;
-    border: 1px solid #555555;
+    width: 350px;
+    height: 50px;
+    border: 1px solid #6a6a6a;
     transition: 0.3s;
-    box-shadow: 0px 6px 0px -2px rgba(67, 145, 209, 1);
+    box-shadow: 0px 6px 0px -2px rgb(125, 129, 137);
     background-color: #ff4500;
   }
   
@@ -256,17 +293,17 @@ border-top: 12px solid #f7f6f5;
 
 .action__btn_gu{
     font-size: 3.0rem;
-    padding: 0 60px;
+    padding: 10px 140px;
 }
 
 .action__btn_cho{
     font-size: 3.0rem;
-    padding: 0 60px;
+    padding: 10px 140px;
 }
 
 .action__btn_pa{
     font-size: 3.0rem;
-    padding: 0 60px;
+    padding: 10px 140px;
 }
 
 /* footer */
