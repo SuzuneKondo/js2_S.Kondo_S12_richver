@@ -211,6 +211,7 @@ $(".action__btn_pa").on("click",function(){
                 $(".meter-me2").remove();
             }else if(loseCount===3){
                 $(".meter-me1").remove();
+                
             }
         console.log('MEライフ-'+loseCount);
         $(".player-image-cp").animate({"marginLeft":"100px"});
