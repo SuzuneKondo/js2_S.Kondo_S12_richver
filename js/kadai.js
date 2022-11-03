@@ -50,6 +50,8 @@ $(".action__btn_gu").on("click",function(){
                 $(".meter-cp2").remove();
             }else if(winCount===3){
                 $(".meter-cp3").remove();
+                $('.pic-me').fadeIn(1000);
+                $('.pic-me').fadeOut(1000);
             }
         console.log('CPライフ-'+winCount);
         $(".player-image-me").animate({"marginRight":"100px"});
@@ -63,6 +65,8 @@ $(".action__btn_gu").on("click",function(){
                 $(".meter-me2").remove();
             }else if(loseCount===3){
                 $(".meter-me1").remove();
+                $('.pic-cp').fadeIn(1000);
+                $('.pic-cp').fadeOut(1000);
             }
         console.log('MEライフ-'+loseCount);
         $(".player-image-cp").animate({"marginLeft":"100px"});
@@ -123,6 +127,8 @@ $(".action__btn_cho").on("click",function(){
                 $(".meter-me2").remove();
             }else if(loseCount===3){
                 $(".meter-me1").remove();
+                $('.pic-cp').fadeIn(1000);
+                $('.pic-cp').fadeOut(1000);
             }
         console.log('MEライフ-'+loseCount);
         $(".player-image-cp").animate({"marginLeft":"100px"});
@@ -139,6 +145,8 @@ $(".action__btn_cho").on("click",function(){
                 $(".meter-cp2").remove();
             }else if(winCount===3){
                 $(".meter-cp3").remove();
+                $('.pic-me').fadeIn(1000);
+                $('.pic-me').fadeOut(1000);
             }
         console.log('CPライフ-'+winCount);
         $(".player-image-me").animate({"marginRight":"100px"});
@@ -198,6 +206,8 @@ $(".action__btn_pa").on("click",function(){
                 $(".meter-cp2").remove();
             }else if(winCount===3){
                 $(".meter-cp3").remove();
+                $('.pic-me').fadeIn(1000);
+                $('.pic-me').fadeOut(1000);
             }
         console.log('CPライフ-'+winCount);
         $(".player-image-me").animate({"marginRight":"100px"});
@@ -211,7 +221,8 @@ $(".action__btn_pa").on("click",function(){
                 $(".meter-me2").remove();
             }else if(loseCount===3){
                 $(".meter-me1").remove();
-                
+                $('.pic-cp').fadeIn(1000);
+                $('.pic-cp').fadeOut(1000);
             }
         console.log('MEライフ-'+loseCount);
         $(".player-image-cp").animate({"marginLeft":"100px"});
